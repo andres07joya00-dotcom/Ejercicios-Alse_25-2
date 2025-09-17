@@ -2,6 +2,11 @@
 #include <iostream>
 
 void suma(int arreglo[]){
+    int suma=0;
+    for (int i = 0; i < 5; i++){
+        suma += arreglo[i];
+    }
+    std::cout << "la suma de los elementos es: " << suma << std::endl;
     
 }
 
