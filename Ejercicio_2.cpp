@@ -5,6 +5,9 @@
 #include <cmath>
 
 void interesc(double P, double r, double n, double t, double A){
+    double interes;
+    interes = P * pow((1 + r/n), (n*t));
+    std::cout << "El monto total despues de " << t << " años es: " << interes << std::endl;
    
 }
 
