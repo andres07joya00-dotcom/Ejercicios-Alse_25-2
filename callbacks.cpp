@@ -2,27 +2,27 @@
 using namespace std;
 
 // Callback functions for different operations
-int add(int a, int b)
+double add(double a, double b)
 {
     return a + b;
 }
 
-int multiply(int a, int b)
+double multiply(double a, double b)
 {
     return a * b;
 }
 
-int subtract(int a, int b)
+double subtract(double a, double b)
 {
     return a - b;
 }
 
-int division(int a, int b){
+double division(double a, double b){
 
     return a / b;
 }   
 // Function that performs an operation using a callback
-void performOperation(int (*callback)(int, int), int x, int y)
+void performOperation(double (*callback)(double, double), double x, double y)
 {
     cout << "The result of the operation is: " << callback(x, y) << endl;
     
@@ -82,7 +82,7 @@ int main(){
 
     // Passing different functions as callbacks
 
-    int (*operations[])(int, int) = {add, multiply, subtract, division};
+    double (*operations[])(double, double) = {add, multiply, subtract, division};
     // Iterate over the array and call each operation
     for (int i = 0; i < 4; ++i)
     {
