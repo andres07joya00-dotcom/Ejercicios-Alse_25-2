@@ -17,26 +17,30 @@ int subtract(int a, int b)
     return a - b;
 }
 
+int division(int a, int b){
+
+    return a / b;
+}   
 // Function that performs an operation using a callback
 void performOperation(int (*callback)(int, int), int x, int y)
 {
-    cout << "The result of the operation is: " << callback(x, 10) << endl;
     cout << "The result of the operation is: " << callback(x, y) << endl;
+    
 }
 
 int operadores(){
     char operador;
     cout << "Operadores" << endl;
     cout << "(+). Suma" << endl;
-    cout << "(-). Multiplicacion" << endl;
-    cout << "(*). Resta" << endl;
+    cout << "(-). Division" << endl;
+    cout << "(*). Multiplicacion" << endl;
     cout << "(/) Dvision" << endl;
     cout << "selecciones el operdor: " << endl;
     cin >> operador;
     return operador;
 }
 int main(){
-    int A, B;
+    double A, B;
     char a;
     char opc='s';
     cout << "Ingrese el valor de A: ";
@@ -59,6 +63,14 @@ int main(){
                 cout << "La multiplicacion es: ";
                 performOperation(multiply, A, B);
                 break;
+            case '/':
+                if (B != 0) {
+                    cout << "La division es: ";
+                    performOperation(division, A, B);
+                } else {
+                    cout << "Error: Division por cero no es permitida." << endl;
+                }
+                break;
             default:
                 cout << "Operador no valido." << endl;
                 break;
@@ -70,9 +82,9 @@ int main(){
 
     // Passing different functions as callbacks
 
-    int (*operations[])(int, int) = {add, multiply, subtract};
+    int (*operations[])(int, int) = {add, multiply, subtract, division};
     // Iterate over the array and call each operation
-    for (int i = 0; i < 3; ++i)
+    for (int i = 0; i < 4; ++i)
     {
         cout << "Operation " << i + 1 << ": ";
         performOperation(operations[i], A, B);
