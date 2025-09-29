@@ -32,7 +32,7 @@ int operadores(){
     char operador;
     cout << "Operadores" << endl;
     cout << "(+). Suma" << endl;
-    cout << "(-). Division" << endl;
+    cout << "(-). Resta" << endl;
     cout << "(*). Multiplicacion" << endl;
     cout << "(/) Dvision" << endl;
     cout << "selecciones el operdor: " << endl;
