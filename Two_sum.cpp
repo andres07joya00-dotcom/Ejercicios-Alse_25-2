@@ -15,12 +15,21 @@ void sumatarget(int ar[4], int target, int arr[2]){
 }
  
 int main(){
-    int nums[4] = {2, 3, 4, 5};
-    int target = 9;
+    int nums[4] = {0};
+    int target = 0;
+
+    cout << "ingres los numeros del arreglo: " << endl;
+    for(int i = 0; i<4; i++){
+        cin >> nums[i];
+    }
+
+    cout << "ingrese el target: " << endl;
+    cin >> target;
+
     int arrrr[2];
     sumatarget(nums, target, arrrr);
-    cout << arrrr[0] << endl;
-    cout << arrrr[1] << endl;
+    cout << "posicion en al arreglo: " << arrrr[0] << endl;
+    cout << "posicion en el arreglo: " << arrrr[1] << endl;
     
     return 0;
 }
